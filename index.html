@@ -3,319 +3,729 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keyboard Hire Marrakech - Premium Keyboard & Piano Rental Services</title>
-    <meta name="description" content="Professional keyboard hire in Marrakech. Premium stage pianos, synths, and digital keyboards for events, concerts, and studio sessions. Fast delivery available.">
-    <meta name="keywords" content="keyboard hire Marrakech, piano rental, keyboard rental, digital piano hire, stage piano rental, music equipment hire, keyboard hire Morocco, piano hire Marrakech">
+    <title>Home - Keyboard Hire Marrakech</title>
+    <meta name="description" content="At Keyboard Hire Marrakech we offer premium stage pianos & synths for gigs and sessions. Contact us today for unbeatable quality and service">
+    <meta name="keywords" content="keyboard hire Marrakech, keyboard rental Morocco, stage piano rental, synthesizer hire, digital piano rental">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <h1>Keyboard <span>Hire</span> Marrakech</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="index.html#equipment" class="nav-link">Equipment</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="clients.html" class="nav-link">Clients</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<body style="background-color: #fff; font-family: 'Work Sans', sans-serif;">
+    
+    <!-- Top Bar -->
+    <div style="background-color: #000; color: #fff; padding: 15px 0; position: fixed; top: 0; width: 100%; z-index: 1000;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <div>
+                    <div style="font-size: 18px; font-weight: 600;">Keyboard Hire Marrakech</div>
+                    <div style="font-size: 12px; text-transform: uppercase;">+212 5XX-XXX-XXX</div>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section with Video -->
-    <section id="home" class="hero">
-        <div class="video-container">
-            <video autoplay muted loop id="hero-video">
-                <source src="Keyboard-Hire-Comp.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="video-overlay"></div>
-        </div>
-        <div class="hero-content">
-            <h1>Premium <span>Keyboard Hire</span> in Marrakech</h1>
-            <p>Professional stage pianos, synths, and digital keyboards for concerts, events, and studio sessions. Quality instruments delivered to your venue.</p>
-                        <div class="contact-info">
-                <p><strong>Call Now:</strong> +212 5XX-XXX-XXX</p>
-                <p><strong>24/7 Emergency Service Available</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Equipment -->
-    <section id="equipment" class="equipment">
-        <div class="container">
-            <h2>Featured <span>Keyboard Hire</span> Equipment</h2>
-            <p>Professional grade keyboards and pianos for every occasion</p>
             
-            <div class="equipment-grid">
-                <div class="equipment-card">
-                    <div class="equipment-image">
-                        <img src="https://images.unsplash.com/photo-1598428016293-676da4e43568?w=400&h=300&fit=crop&crop=center" alt="Nord Stage 2 Keyboard" loading="lazy">
-                    </div>
-                    <div class="equipment-info">
-                        <h3>Nord Stage 2</h3>
-                        <p>Premium stage piano with weighted keys, perfect for professional performances</p>
-                        <a href="contact.html" class="btn-details">View Details</a>
-                    </div>
-                </div>
+            <!-- Desktop Menu -->
+            <div class="desktop-menu" style="text-align: center; font-size: 14px;">
+                Open for business 24 hours a day, 7 days a week
+            </div>
+            
+            <!-- Desktop Social Links -->
+            <div class="desktop-social" style="display: flex; gap: 20px; align-items: center;">
+                <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <!-- Desktop Hamburger Menu -->
+            <div class="desktop-hamburger" style="cursor: pointer; flex-direction: column; gap: 4px;" onclick="toggleDesktopMenu()">
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+            </div>
+            
+            <!-- Mobile Hamburger Menu -->
+            <div class="hamburger" style="display: none; cursor: pointer; flex-direction: column; gap: 4px;">
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Desktop Menu Dropdown -->
+    <div id="desktop-menu-dropdown" style="position: fixed; top: 70px; right: 20px; width: 300px; background: #000; color: #fff; padding: 20px; display: none; z-index: 999; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <div style="text-align: center; font-size: 14px; margin-bottom: 20px;">
+            Open for business 24 hours a day, 7 days a week
+        </div>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+            <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+        </div>
+        <nav style="text-align: center;">
+            <a href="about.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0; border-bottom: 1px solid #333;">About</a>
+            <a href="clients.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0; border-bottom: 1px solid #333;">Clients</a>
+            <a href="contact.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0; border-bottom: 1px solid #333;">Contact Us</a>
+            <a href="#equipment" style="color: #fff; text-decoration: none; display: block; padding: 10px 0; border-bottom: 1px solid #333;">Equipment</a>
+            <a href="#faq" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">FAQ</a>
+        </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" style="position: fixed; top: 70px; left: 0; width: 100%; background: #000; color: #fff; padding: 20px 0; display: none; z-index: 999;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; font-size: 14px; margin-bottom: 20px;">
+                Open for business 24 hours a day, 7 days a week
+            </div>
+            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+                <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+            </div>
+            <nav style="text-align: center;">
+                <a href="about.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">About</a>
+                <a href="clients.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">Clients</a>
+                <a href="contact.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">Contact Us</a>
+                <a href="#equipment" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">Equipment</a>
+                <a href="#faq" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">FAQ</a>
+            </nav>
+        </div>
+    </div>
 
-                <div class="equipment-card">
-                    <div class="equipment-image">
-                        <img src="https://images.unsplash.com/photo-1576424361877-603025029c74?w=400&h=300&fit=crop&crop=center" alt="Yamaha CP300 Keyboard" loading="lazy">
-                    </div>
-                    <div class="equipment-info">
-                        <h3>Yamaha CP300</h3>
-                        <p>Professional stage piano with authentic piano sound and feel</p>
-                        <a href="contact.html" class="btn-details">View Details</a>
-                    </div>
-                </div>
-
-                <div class="equipment-card">
-                    <div class="equipment-image">
-                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=300&fit=crop&crop=center" alt="Korg Kronos Keyboard" loading="lazy">
-                    </div>
-                    <div class="equipment-info">
-                        <h3>Korg Kronos</h3>
-                        <p>Workstation keyboard with extensive sound library and sequencing capabilities</p>
-                        <a href="contact.html" class="btn-details">View Details</a>
-                    </div>
-                </div>
-
-                <div class="equipment-card">
-                    <div class="equipment-image">
-                        <img src="https://images.unsplash.com/photo-1471473885385-f9cc0d6b297a?w=400&h=300&fit=crop&crop=center" alt="Roland RD-2000 Keyboard" loading="lazy">
-                    </div>
-                    <div class="equipment-info">
-                        <h3>Roland RD-2000</h3>
-                        <p>Professional stage piano with premium sounds and advanced features</p>
-                        <a href="contact.html" class="btn-details">View Details</a>
+    <!-- Main Content -->
+    <div style="margin-top: 70px;">
+        
+        <!-- Hero Section with Video -->
+        <section style="position: relative; height: 100vh; overflow: hidden; margin-top: -70px; padding-top: 70px;">
+            <video autoplay muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                <source src="Keyboard-Hire-Comp.mp4" type="video/mp4">
+            </video>
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;">
+                <div style="text-align: center; color: #fff; max-width: 800px; padding: 0 20px;">
+                    <h1 style="font-size: 60px; font-weight: 300; margin-bottom: 20px;">Premium Keyboard Hire in Marrakech</h1>
+                    <p style="font-size: 20px; margin-bottom: 30px; line-height: 1.6;">Professional stage pianos, synthesizers, and digital keyboards for concerts, events, and studio recordings. Serving Morocco's music industry since 2009.</p>
+                    <div style="display: flex; gap: 20px; justify-content: center;">
+                        <a href="#products" style="background: #fff; color: #000; padding: 15px 30px; text-decoration: none; font-weight: 500; border-radius: 5px;">Browse Equipment</a>
+                        <a href="#contact" style="background: transparent; color: #fff; border: 2px solid #fff; padding: 13px 30px; text-decoration: none; font-weight: 500; border-radius: 5px;">Get Quote</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    <!-- About Us Section -->
+        <section id="about" style="padding: 80px 0; background: #fff; border-bottom: 1px solid #000;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                    <div>
+                        <h2 style="font-size: 45px; font-weight: 500; margin-bottom: 30px; color: #000;">About Keyboard Hire Marrakech</h2>
+                        <p style="font-size: 18px; line-height: 1.6; color: #000; margin-bottom: 25px;">Since 2009, Keyboard Hire Marrakech has been Morocco's premier provider of professional keyboard rental services. Founded by passionate musicians and audio engineers, we understand the unique demands of live performances and studio recordings in Morocco's vibrant music scene.</p>
+                        <p style="font-size: 18px; line-height: 1.6; color: #000; margin-bottom: 25px;">Our mission is simple: to provide musicians, event organizers, and recording studios with access to world-class keyboard equipment without the burden of ownership costs. From intimate jazz performances in Marrakech's historic venues to large-scale music festivals across Morocco, our keyboards have been part of countless memorable musical moments.</p>
+                        <p style="font-size: 18px; line-height: 1.6; color: #000; margin-bottom: 30px;">We pride ourselves on our technical expertise, reliable service, and deep understanding of both traditional Moroccan music and contemporary genres. Our team consists of experienced musicians and sound engineers who can help you choose the perfect keyboard setup for your specific needs, whether you're performing classical Andalusian music, modern pop, or experimental electronic compositions.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div style="padding: 20px; background: #fff; border: 1px solid #000; border-radius: 10px;">
+                                <h4 style="font-size: 24px; font-weight: 500; margin-bottom: 10px; color: #000;">15+ Years</h4>
+                                <p style="color: #000; font-size: 14px;">Serving Morocco's music industry with excellence and reliability</p>
+                            </div>
+                            <div style="padding: 20px; background: #fff; border: 1px solid #000; border-radius: 10px;">
+                                <h4 style="font-size: 24px; font-weight: 500; margin-bottom: 10px; color: #000;">5000+ Events</h4>
+                                <p style="color: #000; font-size: 14px;">Successfully supported concerts, festivals, and recordings across Morocco</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600&h=500" alt="Keyboard Hire Marrakech Warehouse" style="width: 100%; border-radius: 10px; border: 1px solid #000;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Products Section -->
+        <section id="products" style="padding: 60px 0;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="text-align: center; font-size: 45px; font-weight: 500; margin-bottom: 20px; color: #000;">Our Premium Keyboards</h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 50px; color: #000;">Professional stage pianos, synthesizers, and digital keyboards for every occasion</p>
+                
+                <!-- Product Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    
+                    <!-- Product 1 -->
+                    <div style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;" onclick="scrollToContact()">
+                        <div style="position: relative;">
+                            <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Nord Stage 2" style="width: 100%; height: 250px; object-fit: cover;">
+                            <span style="position: absolute; top: 10px; left: 10px; background: #000; color: #fff; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">Available Now</span>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Nord Stage 2</h3>
+                            <p style="color: #000; margin-bottom: 15px; font-size: 14px;">Professional stage piano with 88-key weighted action</p>
+                            <div style="margin-bottom: 15px;">
+                                <span style="color: #000; font-size: 16px;">Contact for pricing and availability</span>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #000; color: #fff; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">GET QUOTE</a>
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;" onclick="scrollToContact()">
+                        <div style="position: relative;">
+                            <img src="https://images.pexels.com/photos/164693/pexels-photo-164693.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Yamaha CP300" style="width: 100%; height: 250px; object-fit: cover;">
+                            <span style="position: absolute; top: 10px; left: 10px; background: #000; color: #fff; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">Available Now</span>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Yamaha CP300</h3>
+                            <p style="color: #000; margin-bottom: 15px; font-size: 14px;">Stage piano with authentic grand piano sound</p>
+                            <div style="margin-bottom: 15px;">
+                                <span style="color: #000; font-size: 16px;">Contact for pricing and availability</span>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #000; color: #fff; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">GET QUOTE</a>
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;" onclick="scrollToContact()">
+                        <div style="position: relative;">
+                            <img src="https://images.pexels.com/photos/169199/pexels-photo-169199.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Korg Kronos" style="width: 100%; height: 250px; object-fit: cover;">
+                            <span style="position: absolute; top: 10px; left: 10px; background: #000; color: #fff; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">Available Now</span>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Korg Kronos</h3>
+                            <p style="color: #000; margin-bottom: 15px; font-size: 14px;">Music workstation with 9 sound engines</p>
+                            <div style="margin-bottom: 15px;">
+                                <span style="color: #000; font-size: 16px;">Contact for pricing and availability</span>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #000; color: #fff; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">GET QUOTE</a>
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;" onclick="scrollToContact()">
+                        <div style="position: relative;">
+                            <img src="https://images.pexels.com/photos/169200/pexels-photo-169200.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Roland RD-2000" style="width: 100%; height: 250px; object-fit: cover;">
+                            <span style="position: absolute; top: 10px; left: 10px; background: #000; color: #fff; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">Available Now</span>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Roland RD-2000</h3>
+                            <p style="color: #000; margin-bottom: 15px; font-size: 14px;">Digital stage piano with premium sounds</p>
+                            <div style="margin-bottom: 15px;">
+                                <span style="color: #000; font-size: 16px;">Contact for pricing and availability</span>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #000; color: #fff; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">GET QUOTE</a>
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;" onclick="scrollToContact()">
+                        <div style="position: relative;">
+                            <img src="https://images.pexels.com/photos/169201/pexels-photo-169201.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Nord Lead 4" style="width: 100%; height: 250px; object-fit: cover;">
+                            <span style="position: absolute; top: 10px; left: 10px; background: #000; color: #fff; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">Available Now</span>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Nord Lead 4</h3>
+                            <p style="color: #000; margin-bottom: 15px; font-size: 14px;">Performance synthesizer with analog modeling</p>
+                            <div style="margin-bottom: 15px;">
+                                <span style="color: #000; font-size: 16px;">Contact for pricing and availability</span>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #000; color: #fff; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">GET QUOTE</a>
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer;" onclick="scrollToContact()">
+                        <div style="position: relative;">
+                            <img src="https://images.pexels.com/photos/169202/pexels-photo-169202.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Moog Sub 37" style="width: 100%; height: 250px; object-fit: cover;">
+                            <span style="position: absolute; top: 10px; left: 10px; background: #000; color: #fff; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">Available Now</span>
+                        </div>
+                        <div style="padding: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Moog Sub 37</h3>
+                            <p style="color: #000; margin-bottom: 15px; font-size: 14px;">Analog synthesizer with 37 keys</p>
+                            <div style="margin-bottom: 15px;">
+                                <span style="color: #000; font-size: 16px;">Contact for pricing and availability</span>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #000; color: #fff; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">GET QUOTE</a>
+                                <a href="#contact" onclick="event.stopPropagation(); scrollToContact()" style="flex: 1; background: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; text-decoration: none; text-align: center; border-radius: 5px; font-size: 14px;">DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    <!-- Equipment Details Section -->
+        <section id="equipment-details" style="padding: 80px 0; background: #eef0f1;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="text-align: center; font-size: 45px; font-weight: 500; margin-bottom: 20px; color: #000;">Premium Equipment Standards</h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 50px; color: #666;">Our commitment to quality ensures you receive the best keyboard equipment for your performance</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="font-size: 40px; margin-bottom: 20px; text-align: center;">🎹</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000; text-align: center;">Professional Grade</h3>
+                        <p style="color: #666; line-height: 1.6; text-align: center;">All our keyboards are professional-grade instruments used by touring musicians and recording studios worldwide. We never compromise on quality - each piece is selected for its reliability, sound quality, and performance capabilities.</p>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="font-size: 40px; margin-bottom: 20px; text-align: center;">🔧</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000; text-align: center;">Meticulously Maintained</h3>
+                        <p style="color: #666; line-height: 1.6; text-align: center;">Every keyboard undergoes rigorous testing and maintenance before each rental. Our certified technicians calibrate, clean, and inspect each instrument to ensure optimal performance and reliability.</p>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="font-size: 40px; margin-bottom: 20px; text-align: center;">🎵</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000; text-align: center;">Authentic Sounds</h3>
+                        <p style="color: #666; line-height: 1.6; text-align: center;">From concert grand piano tones to vintage analog synthesizers, our equipment delivers authentic, high-quality sounds that enhance any musical genre or performance style.</p>
+                    </div>
+                </div>
+                
+                <div style="background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 28px; font-weight: 500; margin-bottom: 20px; color: #000; text-align: center;">What's Included With Every Rental</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div style="width: 40px; height: 40px; background: #000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">✓</div>
+                            <div>
+                                <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 5px; color: #000;">Power Supply & Cables</h4>
+                                <p style="color: #666; font-size: 14px;">All necessary power adapters and connection cables</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div style="width: 40px; height: 40px; background: #000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">✓</div>
+                            <div>
+                                <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 5px; color: #000;">Professional Setup</h4>
+                                <p style="color: #666; font-size: 14px;">Delivery, setup, and sound check by our technicians</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div style="width: 40px; height: 40px; background: #000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">✓</div>
+                            <div>
+                                <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 5px; color: #000;">24/7 Support</h4>
+                                <p style="color: #666; font-size: 14px;">Technical assistance available throughout your rental period</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div style="width: 40px; height: 40px; background: #000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">✓</div>
+                            <div>
+                                <h4 style="font-size: 18px; font-weight: 500; margin-bottom: 5px; color: #000;">Insurance Coverage</h4>
+                                <p style="color: #666; font-size: 14px;">Comprehensive insurance for peace of mind</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2>Our <span>Keyboard Hire</span> Services</h2>
-            <p>Comprehensive keyboard rental solutions for all your needs</p>
-            
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon">🎹</div>
-                    <h3>Event Keyboard Hire</h3>
-                    <p>Professional keyboards for concerts, weddings, corporate events, and festivals in Marrakech</p>
-                </div>
-                
-                <div class="service-item">
-                    <div class="service-icon">🎤</div>
-                    <h3>Studio Keyboard Rental</h3>
-                    <p>High-quality keyboards and pianos for recording sessions and music production</p>
-                </div>
-                
-                <div class="service-item">
-                    <div class="service-icon">🚚</div>
-                    <h3>Fast Delivery Service</h3>
-                    <p>Quick delivery and setup throughout Marrakech and surrounding areas</p>
-                </div>
-                
-                <div class="service-item">
-                    <div class="service-icon">🔧</div>
-                    <h3>Technical Support</h3>
-                    <p>24/7 technical support and backup equipment for peace of mind</p>
+        <section id="services" style="padding: 60px 0; background: #fff; border-bottom: 1px solid #000;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <h2 style="font-size: 45px; font-weight: 500; margin-bottom: 20px; color: #000;">Our Services</h2>
+                        <p style="font-size: 18px; line-height: 1.6; color: #000; margin-bottom: 30px;">Our knowledgeable team is available around the clock to offer expert technical support and guidance, helping you choose the perfect keyboard setup for your event or project. We also provide delivery, setup, and collection services throughout Marrakech, allowing you to focus on your performance while we handle the logistics, making your event or session stress-free and musically successful.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Event Rental</h3>
+                                <p style="color: #000; font-size: 14px;">Complete keyboard solutions for concerts, festivals, weddings, and corporate events with professional setup and on-site support.</p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Studio Recording</h3>
+                                <p style="color: #000; font-size: 14px;">High-end keyboards and synthesizers for professional recording sessions with pristine sound quality.</p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Delivery & Setup</h3>
+                                <p style="color: #000; font-size: 14px;">Professional delivery, installation, and setup services across Marrakech and throughout Morocco.</p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Technical Support</h3>
+                                <p style="color: #000; font-size: 14px;">24/7 technical assistance and emergency support to ensure your performance goes smoothly.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Keyboard Services" style="width: 100%; border-radius: 10px; border: 1px solid #000;">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About <span>Keyboard Hire Marrakech</span></h2>
-                    <p>With over 15 years of experience in professional audio equipment rental, we are Marrakech's premier keyboard hire service. Our extensive inventory includes the latest models from top brands like Nord, Yamaha, Korg, and Roland.</p>
-                    <p>We pride ourselves on providing exceptional service, well-maintained equipment, and competitive pricing for all your keyboard rental needs. Whether you're organizing a major concert, recording session, or private event, our team ensures you have the perfect keyboard for your performance.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>500+</h3>
-                            <p>Happy Clients</p>
-                        </div>
-                        <div class="stat">
-                            <h3>1000+</h3>
-                            <p>Events Served</p>
-                        </div>
-                        <div class="stat">
-                            <h3>24/7</h3>
-                            <p>Support Available</p>
-                        </div>
+    <!-- Reviews Section -->
+        <section id="reviews" style="padding: 60px 0; background: #fff; border-bottom: 1px solid #000;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="text-align: center; font-size: 45px; font-weight: 500; margin-bottom: 20px; color: #000;">Customer Reviews</h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 50px; color: #000;">What our clients say about our keyboard rental service</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="color: #ffa500; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                        <p style="color: #000; margin-bottom: 20px; font-style: italic;">"Outstanding service and equipment quality. The Nord Stage 2 was perfectly maintained and delivered on time for our concert. Highly recommend!"</p>
+                        <div style="font-weight: 500; color: #000;">Karim El Mernissi</div>
+                        <div style="color: #000; font-size: 14px;">International Recording Artist</div>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="color: #ffa500; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                        <p style="color: #000; margin-bottom: 20px; font-style: italic;">"We've used Keyboard Hire Marrakech for our annual festival for 5 years. Their reliability and professionalism are unmatched in Morocco."</p>
+                        <div style="font-weight: 500; color: #000;">Leila Benjelloun</div>
+                        <div style="color: #000; font-size: 14px;">Event Producer, Marrakech Arts Festival</div>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="color: #ffa500; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+                        <p style="color: #000; margin-bottom: 20px; font-style: italic;">"Perfect equipment for our recording session. The technical support was invaluable and the keyboard sounded amazing. Will definitely rent again."</p>
+                        <div style="font-weight: 500; color: #000;">David Chen</div>
+                        <div style="color: #000; font-size: 14px;">Concert Tour Manager</div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1564466809118-fb3321f1a7a9?w=500&h=400&fit=crop&crop=center" alt="Professional Keyboard Service" loading="lazy">
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>What Our <span>Clients Say</span></h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Amazing keyboard hire service in Marrakech! The equipment was top-quality and delivery was right on time. Highly recommend for any event!"</p>
-                    <div class="client-info">
-                        <strong>Ahmed Benali</strong>
-                        <span>Event Organizer</span>
+        <!-- How It Works Section -->
+        <section id="process" style="padding: 80px 0; background: #fff;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="text-align: center; font-size: 45px; font-weight: 500; margin-bottom: 20px; color: #000;">How It Works</h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 50px; color: #000;">Simple, straightforward process to get the perfect keyboard for your needs</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: #000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 36px; font-weight: bold;">1</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000;">Contact Us</h3>
+                        <p style="color: #000; line-height: 1.6;">Reach out via phone, email, or our contact form. Tell us about your event, venue, and musical requirements. Our team will help you select the perfect keyboard setup.</p>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: #000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 36px; font-weight: bold;">2</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000;">Get Quote</h3>
+                        <p style="color: #000; line-height: 1.6;">Receive a detailed quote with pricing options based on your rental duration, delivery requirements, and specific equipment needs. We offer flexible packages for every budget.</p>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: #000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 36px; font-weight: bold;">3</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000;">Book & Confirm</h3>
+                        <p style="color: #000; line-height: 1.6;">Confirm your booking with a simple deposit. We'll reserve your equipment and schedule delivery. Our team coordinates all logistics to ensure everything arrives on time.</p>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: #000; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 36px; font-weight: bold;">4</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000;">Enjoy & Perform</h3>
+                        <p style="color: #000; line-height: 1.6;">We deliver, set up, and test your equipment. Focus on your performance while we handle everything. 24/7 support available throughout your rental period.</p>
                     </div>
                 </div>
                 
-                <div class="testimonial">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Professional service and excellent keyboard selection. They helped us choose the perfect piano for our wedding ceremony. Thank you!"</p>
-                    <div class="client-info">
-                        <strong>Fatima Alami</strong>
-                        <span>Wedding Client</span>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Top level professionals! Incredibly grateful for the last-minute keyboard rental for our concert. They saved our show!"</p>
-                    <div class="client-info">
-                        <strong>Youssef Rahman</strong>
-                        <span>Concert Promoter</span>
+                <div style="text-align: center; margin-top: 60px;">
+                    <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; max-width: 800px; margin: 0 auto;">
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000;">Ready to Get Started?</h3>
+                        <p style="color: #000; margin-bottom: 20px;">Contact our team today to discuss your keyboard rental needs. We're here to help make your event or recording a success.</p>
+                        <a href="#contact" onclick="scrollToContact()" style="background: #000; color: #fff; padding: 15px 30px; text-decoration: none; font-weight: 500; border-radius: 5px; display: inline-block;">Get Your Quote Now</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Other Services Section -->
+        <section style="padding: 60px 0; background: #fff;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="text-align: center; font-size: 45px; font-weight: 500; margin-bottom: 20px; color: #000;">Our Other Services</h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 50px; color: #666;">Complete music equipment rental solutions</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 10px;">
+                        <div style="font-size: 40px; margin-bottom: 20px;">🎸</div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #000;">Guitar & Amp Hire</h3>
+                        <p style="color: #666; font-size: 14px;">Professional guitars, basses, and amplifiers for all genres</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 10px;">
+                        <div style="font-size: 40px; margin-bottom: 20px;">🎤</div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #000;">Microphone Hire</h3>
+                        <p style="color: #666; font-size: 14px;">Studio and live microphones from leading brands</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 10px;">
+                        <div style="font-size: 40px; margin-bottom: 20px;">🔊</div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #000;">PA Systems</h3>
+                        <p style="color: #666; font-size: 14px;">Complete sound systems for events and venues</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 10px;">
+                        <div style="font-size: 40px; margin-bottom: 20px;">🥁</div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #000;">Drum Hire</h3>
+                        <p style="color: #666; font-size: 14px;">Acoustic and electronic drum kits for all styles</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" style="padding: 80px 0; background: #fff; border-bottom: 1px solid #000;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="text-align: center; font-size: 45px; font-weight: 500; margin-bottom: 20px; color: #000;">Frequently Asked Questions</h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 50px; color: #000;">Everything you need to know about keyboard rental in Marrakech</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #000;">How far in advance should I book?</h3>
+                        <p style="color: #000; line-height: 1.6;">We recommend booking at least 2 weeks in advance for events, especially during peak season (May-September). However, we do offer same-day rental for urgent needs subject to availability.</p>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #000;">Do you provide delivery and setup?</h3>
+                        <p style="color: #000; line-height: 1.6;">Yes, we provide professional delivery, setup, and pickup services throughout Marrakech. Our technical team ensures everything is perfectly configured for your event.</p>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #000;">What if the equipment fails during my event?</h3>
+                        <p style="color: #000; line-height: 1.6;">We offer 24/7 emergency support and typically have backup equipment available. Our team can be on-site within 2 hours for any technical issues.</p>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #000;">Are there any additional fees?</h3>
+                        <p style="color: #000; line-height: 1.6;">No hidden fees. Our pricing includes delivery, setup, and basic technical support within Marrakech. Additional charges may apply for services outside the city.</p>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #000;">What brands do you carry?</h3>
+                        <p style="color: #000; line-height: 1.6;">We carry premium brands including Nord, Yamaha, Korg, Roland, Kawai, and Casio. All equipment is professionally maintained and regularly updated.</p>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #000;">Do you offer long-term rental discounts?</h3>
+                        <p style="color: #000; line-height: 1.6;">Yes, we offer significant discounts for weekly and monthly rentals. Contact us for custom pricing on long-term projects and venue contracts.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 50px;">
+                    <p style="color: #000; margin-bottom: 20px;">Still have questions? We're here to help!</p>
+                    <a href="#contact" onclick="scrollToContact()" style="background: #000; color: #fff; padding: 15px 30px; text-decoration: none; font-weight: 500; border-radius: 5px; display: inline-block;">Contact Our Team</a>
+                </div>
+            </div>
+        </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact <span>Keyboard Hire Marrakech</span></h2>
-            <p>Get in touch for expert keyboard rental advice and quotes</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h3>📞 Phone</h3>
-                        <p>+212 5XX-XXX-XXX</p>
-                        <p>24/7 Emergency: +212 6XX-XXX-XXX</p>
+        <section id="contact" style="padding: 60px 0; background: #fff;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <h2 style="font-size: 45px; font-weight: 500; margin-bottom: 20px; color: #000;">Contact Us</h2>
+                        <p style="font-size: 18px; line-height: 1.6; color: #000; margin-bottom: 30px;">Get in touch with our team to discuss your keyboard rental requirements. We're available 24/7 to help you find the perfect equipment for your event or project.</p>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Phone</h3>
+                            <p style="color: #000; font-size: 16px;">+212 5XX-XXX-XXX</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Email</h3>
+                            <p style="color: #000; font-size: 16px;">info@keyboardhiremarrakech.com</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Location</h3>
+                            <p style="color: #000; font-size: 16px;">Gueliz, Marrakech, Morocco</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 10px; color: #000;">Hours</h3>
+                            <p style="color: #000; font-size: 16px;">Mon-Sat: 9AM-7PM<br>24/7 Emergency Service Available</p>
+                        </div>
                     </div>
                     
-                    <div class="contact-item">
-                        <h3>📧 Email</h3>
-                        <p>info@keyboardhiremarrakech.com</p>
-                        <p>emergency@keyboardhiremarrakech.com</p>
+                    <div>
+                        <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                            <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 20px; color: #000;">Quick Enquiry</h3>
+                            <form>
+                                <div style="margin-bottom: 15px;">
+                                    <input type="text" placeholder="Your Name" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <input type="email" placeholder="Your Email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <input type="tel" placeholder="Your Phone" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
+                                </div>
+                                <div style="margin-bottom: 15px;">
+                                    <textarea placeholder="Your Message" rows="4" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; resize: vertical;"></textarea>
+                                </div>
+                                <button type="submit" style="width: 100%; background: #000; color: #fff; padding: 15px; border: none; border-radius: 5px; font-size: 16px; font-weight: 500; cursor: pointer;">Send Message</button>
+                            </form>
+                        </div>
                     </div>
-                    
-                    <div class="contact-item">
-                        <h3>📍 Location</h3>
-                        <p>Gueliz, Marrakech</p>
-                        <p>Serving all Marrakech areas</p>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <h3>🕐 Hours</h3>
-                        <p>Mon-Fri: 9:00 AM - 8:00 PM</p>
-                        <p>Sat-Sun: 10:00 AM - 6:00 PM</p>
-                        <p>24/7 Emergency Service Available</p>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="quote-form">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Your Phone" required>
-                        </div>
-                        <div class="form-group">
-                            <select name="equipment" required>
-                                <option value="">Select Equipment Type</option>
-                                <option value="stage-piano">Stage Piano</option>
-                                <option value="synthesizer">Synthesizer</option>
-                                <option value="digital-piano">Digital Piano</option>
-                                <option value="workstation">Workstation</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <input type="date" name="date" placeholder="Event Date" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Tell us about your event..." rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Get Quote</button>
-                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Keyboard Hire Marrakech</h3>
-                    <p>Your trusted partner for professional keyboard rental services in Marrakech and beyond.</p>
-                                    </div>
-                
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html#equipment">Equipment Hire</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="clients.html">Our Clients</a></li>
-                    </ul>
+        <!-- Footer -->
+        <footer style="background: #000; color: #fff; padding: 60px 0 20px;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                    <div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 20px; color: #fff;">Keyboard Hire Marrakech</h3>
+                        <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">Morocco's premier keyboard rental service with over 15 years of excellence in serving artists, venues, and events throughout the country.</p>
+                        <div style="display: flex; gap: 15px;">
+                            <a href="#" style="color: #fff; text-decoration: none; padding: 8px 15px; background: #333; border-radius: 5px; font-size: 14px;">Facebook</a>
+                            <a href="#" style="color: #fff; text-decoration: none; padding: 8px 15px; background: #333; border-radius: 5px; font-size: 14px;">Instagram</a>
+                            <a href="#" style="color: #fff; text-decoration: none; padding: 8px 15px; background: #333; border-radius: 5px; font-size: 14px;">LinkedIn</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 20px; color: #fff;">Quick Links</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px;"><a href="#products" style="color: #ccc; text-decoration: none;">Equipment Hire</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#services" style="color: #ccc; text-decoration: none;">Our Services</a></li>
+                            <li style="margin-bottom: 10px;"><a href="about.html" style="color: #ccc; text-decoration: none;">About Us</a></li>
+                            <li style="margin-bottom: 10px;"><a href="clients.html" style="color: #ccc; text-decoration: none;">Our Clients</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 20px; color: #fff;">Services</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Event Rental</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Studio Rental</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Technical Support</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Emergency Service</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 20px; color: #fff;">Contact Info</h3>
+                        <p style="color: #ccc; margin-bottom: 10px;"><strong>Phone:</strong> +212 5XX-XXX-XXX</p>
+                        <p style="color: #ccc; margin-bottom: 10px;"><strong>Email:</strong> info@keyboardhiremarrakech.com</p>
+                        <p style="color: #ccc; margin-bottom: 10px;"><strong>Location:</strong> Gueliz, Marrakech, Morocco</p>
+                        <p style="color: #ccc;"><strong>Hours:</strong> Mon-Sat 9AM-7PM, 24/7 Emergency</p>
+                    </div>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Event Keyboard Hire</a></li>
-                        <li><a href="#">Studio Rental</a></li>
-                        <li><a href="#">Technical Support</a></li>
-                        <li><a href="#">Emergency Service</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p><strong>Phone:</strong> +212 5XX-XXX-XXX</p>
-                    <p><strong>Email:</strong> info@keyboardhiremarrakech.com</p>
-                    <p><strong>Location:</strong> Gueliz, Marrakech</p>
+                <div style="text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #ccc;">
+                    <p>&copy; 2024 Keyboard Hire Marrakech. All rights reserved. | Professional Keyboard Rental Since 2009</p>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Keyboard Hire Marrakech. All rights reserved. | Professional Keyboard Rental Services</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
-    <script src="script.js"></script>
+    <script>
+// Hamburger Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const desktopMenu = document.querySelector('.desktop-menu');
+    const desktopSocial = document.querySelector('.desktop-social');
+    
+    // Check screen size on load
+    function checkScreenSize() {
+        if (window.innerWidth <= 768) {
+            hamburger.style.display = 'flex';
+            desktopMenu.style.display = 'none';
+            desktopSocial.style.display = 'none';
+        } else {
+            hamburger.style.display = 'none';
+            desktopMenu.style.display = 'block';
+            desktopSocial.style.display = 'flex';
+            mobileMenu.style.display = 'none';
+        }
+    }
+    
+    // Initial check
+    checkScreenSize();
+    
+    // Check on resize
+    window.addEventListener('resize', checkScreenSize);
+    
+    // Toggle mobile menu
+    hamburger.addEventListener('click', function() {
+        if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+            mobileMenu.style.display = 'block';
+        } else {
+            mobileMenu.style.display = 'none';
+        }
+    });
+    
+    // Close mobile menu when clicking on links
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.style.display = 'none';
+        });
+    });
+});
+
+// Desktop Menu Toggle
+function toggleDesktopMenu() {
+    const desktopMenuDropdown = document.getElementById('desktop-menu-dropdown');
+    if (desktopMenuDropdown.style.display === 'none' || desktopMenuDropdown.style.display === '') {
+        desktopMenuDropdown.style.display = 'block';
+    } else {
+        desktopMenuDropdown.style.display = 'none';
+    }
+}
+
+// Close desktop menu when clicking outside
+document.addEventListener('click', function(event) {
+    const desktopMenuDropdown = document.getElementById('desktop-menu-dropdown');
+    const desktopHamburger = document.querySelector('.desktop-hamburger');
+    
+    if (!desktopHamburger.contains(event.target) && !desktopMenuDropdown.contains(event.target)) {
+        desktopMenuDropdown.style.display = 'none';
+    }
+});
+
+// Close desktop menu when clicking on links
+document.addEventListener('DOMContentLoaded', function() {
+    const desktopLinks = document.querySelectorAll('#desktop-menu-dropdown a');
+    desktopLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            document.getElementById('desktop-menu-dropdown').style.display = 'none';
+        });
+    });
+});
+
+// Smooth scroll to contact form
+function scrollToContact() {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Smooth scroll for all anchor links
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
+
+// Form submission handler
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your enquiry! We will contact you shortly.');
+            form.reset();
+        });
+    }
+});
+</script>
 </body>
 </html>
+
+

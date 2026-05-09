@@ -7,85 +7,419 @@
     <meta name="description" content="Learn about Keyboard Hire Marrakech - Morocco's leading keyboard rental service with 15+ years of experience, premium equipment, and exceptional customer service.">
     <meta name="keywords" content="about keyboard hire Marrakech, keyboard rental company Marrakech, professional keyboard service, music equipment rental Morocco">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <h1>Keyboard <span>Hire</span> Marrakech</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="index.html#equipment" class="nav-link">Equipment</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="clients.html" class="nav-link">Clients</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<body style="background-color: #fff; font-family: 'Work Sans', sans-serif;">
+    
+    <!-- Top Bar -->
+    <div style="background-color: #000; color: #fff; padding: 15px 0; position: fixed; top: 0; width: 100%; z-index: 1000;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <div>
+                    <div style="font-size: 18px; font-weight: 600;">Keyboard Hire Marrakech</div>
+                    <div style="font-size: 12px; text-transform: uppercase;">+212 5XX-XXX-XXX</div>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>About <span>Keyboard Hire Marrakech</span></h1>
-            <p>Morocco's premier keyboard rental service with over 15 years of excellence</p>
+            
+            <!-- Desktop Menu -->
+            <div class="desktop-menu" style="text-align: center; font-size: 14px;">
+                Open for business 24 hours a day, 7 days a week
+            </div>
+            
+            <!-- Desktop Social Links -->
+            <div class="desktop-social" style="display: flex; gap: 20px; align-items: center;">
+                <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <!-- Desktop Hamburger Menu -->
+            <div class="desktop-hamburger" style="cursor: pointer; flex-direction: column; gap: 4px;" onclick="toggleDesktopMenu()">
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+            </div>
+            
+            <!-- Mobile Hamburger Menu -->
+            <div class="hamburger" style="display: none; cursor: pointer; flex-direction: column; gap: 4px;">
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+                <span style="width: 25px; height: 3px; background: #fff; display: block;"></span>
+            </div>
         </div>
-    </section>
+    </div>
+    
+    <!-- Desktop Menu Dropdown -->
+    <div id="desktop-menu-dropdown" style="position: fixed; top: 70px; right: 20px; width: 300px; background: #000; color: #fff; padding: 20px; display: none; z-index: 999; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <div style="text-align: center; font-size: 14px; margin-bottom: 20px;">
+            Open for business 24 hours a day, 7 days a week
+        </div>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+            <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+        </div>
+        <nav style="text-align: center;">
+            <a href="index.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0; border-bottom: 1px solid #333;">Home</a>
+            <a href="about.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0; border-bottom: 1px solid #333;">About</a>
+            <a href="clients.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0; border-bottom: 1px solid #333;">Clients</a>
+            <a href="contact.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0; border-bottom: 1px solid #333;">Contact Us</a>
+            <a href="index.html#equipment" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">Equipment</a>
+        </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" style="position: fixed; top: 70px; left: 0; width: 100%; background: #000; color: #fff; padding: 20px 0; display: none; z-index: 999;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; font-size: 14px; margin-bottom: 20px;">
+                Open for business 24 hours a day, 7 days a week
+            </div>
+            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+                <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: #fff; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+            </div>
+            <nav style="text-align: center;">
+                <a href="index.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">Home</a>
+                <a href="about.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">About</a>
+                <a href="clients.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">Clients</a>
+                <a href="contact.html" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">Contact Us</a>
+                <a href="index.html#equipment" style="color: #fff; text-decoration: none; display: block; padding: 10px 0;">Equipment</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div style="margin-top: 70px;">
+        
+        <!-- Page Header -->
+        <section style="background: #fff; padding: 80px 0; text-align: center;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h1 style="font-size: 45px; font-weight: 500; margin-bottom: 20px; color: #000;">About Keyboard Hire Marrakech</h1>
+                <p style="font-size: 18px; color: #000; max-width: 800px; margin: 0 auto;">Morocco's premier keyboard rental service with over 15 years of excellence in serving artists, venues, and events throughout the country.</p>
+            </div>
+        </section>
 
     <!-- Our Story -->
-    <section class="our-story">
-        <div class="container">
-            <div class="story-content">
-                <div class="story-text">
-                    <h2>Our <span>Story</span></h2>
-                    <p>Founded in 2009, Keyboard Hire Marrakech began as a small passion project by a group of musicians who understood the critical importance of having reliable, high-quality keyboard equipment for performances. What started with just 5 keyboards has grown into Morocco's leading keyboard rental service.</p>
-                    <p>Over the past 15+ years, we've served over 500 clients, from international recording artists to local venues, educational institutions, and event organizers. Our commitment to excellence and customer satisfaction has made us the trusted name in keyboard rental throughout Morocco.</p>
-                    <p>Today, we operate from our modern warehouse in Gueliz, Marrakech, with an extensive inventory of premium keyboards, stage pianos, synthesizers, and digital pianos from the world's leading brands.</p>
+        <section style="padding: 80px 0; background: #fff;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                    <div>
+                        <h2 style="font-size: 45px; font-weight: 500; margin-bottom: 30px; color: #000;">Our Story</h2>
+                        <p style="font-size: 18px; line-height: 1.6; color: #000; margin-bottom: 25px;">Founded in 2009, Keyboard Hire Marrakech began as a small passion project by a group of musicians who understood the critical importance of having reliable, high-quality keyboard equipment for performances. What started with just 5 keyboards has grown into Morocco's leading keyboard rental service.</p>
+                        <p style="font-size: 18px; line-height: 1.6; color: #000; margin-bottom: 25px;">Over the past 15+ years, we've served over 500 clients, from international recording artists to local venues, educational institutions, and event organizers. Our commitment to excellence and customer satisfaction has made us the trusted name in keyboard rental throughout Morocco.</p>
+                        <p style="font-size: 18px; line-height: 1.6; color: #000; margin-bottom: 30px;">Today, we operate from our modern warehouse in Gueliz, Marrakech, with an extensive inventory of premium keyboards, stage pianos, synthesizers, and digital pianos from the world's leading brands.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div style="padding: 20px; background: #fff; border: 1px solid #000; border-radius: 10px;">
+                                <h4 style="font-size: 24px; font-weight: 500; margin-bottom: 10px; color: #000;">15+ Years</h4>
+                                <p style="color: #000; font-size: 14px;">Serving Morocco's music industry with excellence</p>
+                            </div>
+                            <div style="padding: 20px; background: #fff; border: 1px solid #000; border-radius: 10px;">
+                                <h4 style="font-size: 24px; font-weight: 500; margin-bottom: 10px; color: #000;">500+ Clients</h4>
+                                <p style="color: #000; font-size: 14px;">Trusted by artists and venues nationwide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Keyboard Hire Marrakech Warehouse" style="width: 100%; border-radius: 10px; border: 1px solid #000;">
+                    </div>
                 </div>
-                <div class="story-image">
-                    <img src="https://images.unsplash.com/photo-1566665719973-657643b6158b?w=500&h=400&fit=crop&crop=center" alt="Keyboard Hire Marrakech Warehouse">
+            </div>
+        </section>
+
+        <!-- Mission & Values -->
+        <section style="padding: 80px 0; background: #fff; border-bottom: 1px solid #000;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="text-align: center; font-size: 45px; font-weight: 500; margin-bottom: 20px; color: #000;">Our Mission & Values</h2>
+                <p style="text-align: center; font-size: 18px; margin-bottom: 50px; color: #000;">The principles that guide everything we do</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div style="background: #fff; padding: 30px; border: 1px solid #000; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 40px; margin-bottom: 20px;">🎯</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000;">Excellence</h3>
+                        <p style="color: #000; line-height: 1.6;">We provide only the highest quality, professionally maintained keyboard equipment to ensure flawless performances every time.</p>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border: 1px solid #000; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 40px; margin-bottom: 20px;">⏰</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000;">Reliability</h3>
+                        <p style="color: #000; line-height: 1.6;">Punctual delivery, professional setup, and 24/7 support to ensure your event runs smoothly without any technical issues.</p>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border: 1px solid #000; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 40px; margin-bottom: 20px;">🤝</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000;">Customer Focus</h3>
+                        <p style="color: #000; line-height: 1.6;">We treat every client like family, providing personalized service and going above and beyond to meet your specific needs.</p>
+                    </div>
+                    
+                    <div style="background: #fff; padding: 30px; border: 1px solid #000; border-radius: 10px; text-align: center;">
+                        <div style="font-size: 40px; margin-bottom: 20px;">🚀</div>
+                        <h3 style="font-size: 24px; font-weight: 500; margin-bottom: 15px; color: #000;">Innovation</h3>
+                        <p style="color: #000; line-height: 1.6;">Continuously updating our inventory with the latest keyboard technology and staying ahead of industry trends.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Company Timeline Section -->
+    <section class="company-timeline">
+        <div class="container">
+            <h2>Our <span>Journey</span></h2>
+            <p>Key milestones in our 15+ years of serving Marrakech's music community</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Foundation</h3>
+                        <h4>2009</h4>
+                        <p>Started with just 5 keyboards and a vision to provide professional equipment rental services in Marrakech.</p>
+                    </div>
+                    <div class="timeline-year">09</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>First Major Event</h3>
+                        <h4>2011</h4>
+                        <p>Provided keyboards for the Marrakech International Film Festival, establishing our reputation for excellence.</p>
+                    </div>
+                    <div class="timeline-year">11</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Gueliz Showroom</h3>
+                        <h4>2014</h4>
+                        <p>Opened our modern showroom and technical workshop in the heart of Marrakech's business district.</p>
+                    </div>
+                    <div class="timeline-year">14</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Partnership Expansion</h3>
+                        <h4>2017</h4>
+                        <p>Established official partnerships with leading manufacturers including Nord, Yamaha, and Korg.</p>
+                    </div>
+                    <div class="timeline-year">17</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>500+ Clients Milestone</h3>
+                        <h4>2020</h4>
+                        <p>Reached the milestone of serving over 500 clients, from local artists to international productions.</p>
+                    </div>
+                    <div class="timeline-year">20</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Industry Recognition</h3>
+                        <h4>2023</h4>
+                        <p>Awarded "Best Music Equipment Rental Service" by the Marrakech Business Association.</p>
+                    </div>
+                    <div class="timeline-year">23</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission & Values -->
-    <section class="mission-values">
+    <!-- Company Culture Section -->
+    <section class="company-culture">
         <div class="container">
-            <h2>Our <span>Mission & Values</span></h2>
+            <h2>Our <span>Culture</span></h2>
+            <p>The values and principles that guide everything we do</p>
             
-            <div class="values-grid">
-                <div class="value-item">
-                    <div class="value-icon">🎯</div>
-                    <h3>Excellence</h3>
-                    <p>We provide only the highest quality, professionally maintained keyboard equipment to ensure flawless performances every time.</p>
+            <div class="culture-grid">
+                <div class="culture-item">
+                    <div class="culture-icon">🎵</div>
+                    <h3>Passion for Music</h3>
+                    <p>We're musicians first and business people second. Every team member understands the technical and artistic needs of performers.</p>
                 </div>
                 
-                <div class="value-item">
-                    <div class="value-icon">⏰</div>
-                    <h3>Reliability</h3>
-                    <p>Punctual delivery, professional setup, and 24/7 support to ensure your event runs smoothly without any technical issues.</p>
+                <div class="culture-item">
+                    <div class="culture-icon">🤝</div>
+                    <h3>Collaborative Spirit</h3>
+                    <p>We work together as a family, supporting each other and our clients to achieve extraordinary results.</p>
                 </div>
                 
-                <div class="value-item">
-                    <div class="value-icon">🤝</div>
-                    <h3>Customer Focus</h3>
-                    <p>We treat every client like family, providing personalized service and going above and beyond to meet your specific needs.</p>
+                <div class="culture-item">
+                    <div class="culture-icon">🎯</div>
+                    <h3>Excellence Mindset</h3>
+                    <p>We never compromise on quality and continuously seek ways to improve our services and equipment.</p>
                 </div>
                 
-                <div class="value-item">
-                    <div class="value-icon">🚀</div>
-                    <h3>Innovation</h3>
-                    <p>Continuously updating our inventory with the latest keyboard technology and staying ahead of industry trends.</p>
+                <div class="culture-item">
+                    <div class="culture-icon">🌍</div>
+                    <h3>Local Roots, Global Vision</h3>
+                    <p>Deeply connected to Marrakech's music scene while serving international clients with world-class standards.</p>
+                </div>
+                
+                <div class="culture-item">
+                    <div class="culture-icon">🚀</div>
+                    <h3>Innovation Drive</h3>
+                    <p>Embracing new technologies and creative solutions to stay ahead in the ever-evolving music industry.</p>
+                </div>
+                
+                <div class="culture-item">
+                    <div class="culture-icon">💝</div>
+                    <h3>Community Focus</h3>
+                    <p>Giving back to the community that has supported us through music education and local event sponsorship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology & Innovation Section -->
+    <section class="technology-innovation">
+        <div class="container">
+            <h2>Technology & <span>Innovation</span></h2>
+            <p>Leading the industry with cutting-edge equipment and technical expertise</p>
+            
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">🔧</div>
+                    <h3>Advanced Maintenance</h3>
+                    <p>State-of-the-art workshop with manufacturer-certified technicians ensuring perfect calibration and performance.</p>
+                    <ul class="tech-features">
+                        <li>Daily equipment checks</li>
+                        <li>Manufacturer-certified repairs</li>
+                        <li>Preventive maintenance schedules</li>
+                        <li>Performance testing protocols</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">📡</div>
+                    <h3>Digital Integration</h3>
+                    <p>Modern keyboards with advanced digital connectivity for seamless integration with any sound system or recording setup.</p>
+                    <ul class="tech-features">
+                        <li>MIDI and USB connectivity</li>
+                        <li>Wireless audio transmission</li>
+                        <li>Digital audio workstation compatibility</li>
+                        <li>Remote monitoring capabilities</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">🎛️</div>
+                    <h3>Premium Sound Quality</h3>
+                    <p>Only the highest quality instruments with superior sound engines and authentic piano feel for professional performances.</p>
+                    <ul class="tech-features">
+                        <li>88-key weighted actions</li>
+                        <li>Professional sound libraries</li>
+                        <li>High-definition audio output</li>
+                        <li>Custom sound programming</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Involvement Section -->
+    <section class="community-involvement">
+        <div class="container">
+            <h2>Community <span>Involvement</span></h2>
+            <p>Giving back to the Marrakech community that has supported our growth</p>
+            
+            <div class="community-grid">
+                <div class="community-item">
+                    <div class="community-image">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=200&fit=crop&crop=center" alt="Music Education Program">
+                    </div>
+                    <div class="community-content">
+                        <h3>Music Education Support</h3>
+                        <p>Providing free keyboard rentals and workshops for local schools and music education programs across Marrakech.</p>
+                        <div class="community-impact">
+                            <span class="impact-stat">15+ Schools</span>
+                            <span class="impact-stat">500+ Students</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="community-item">
+                    <div class="community-image">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=200&fit=crop&crop=center" alt="Local Festival Support">
+                    </div>
+                    <div class="community-content">
+                        <h3>Local Festival Sponsorship</h3>
+                        <p>Supporting Marrakech's vibrant music scene by sponsoring local festivals and cultural events throughout the year.</p>
+                        <div class="community-impact">
+                            <span class="impact-stat">10+ Festivals</span>
+                            <span class="impact-stat">Annual Support</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="community-item">
+                    <div class="community-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop&crop=center" alt="Emerging Artists Program">
+                    </div>
+                    <div class="community-content">
+                        <h3>Emerging Artists Program</h3>
+                        <p>Offering discounted rates and mentorship for emerging musicians and local artists building their careers.</p>
+                        <div class="community-impact">
+                            <span class="impact-stat">50+ Artists</span>
+                            <span class="impact-stat">Career Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories-about">
+        <div class="container">
+            <h2>Client <span>Success Stories</span></h2>
+            <p>Hear from the artists and organizations we've had the privilege to work with</p>
+            
+            <div class="stories-grid">
+                <div class="story-item-about">
+                    <div class="story-header">
+                        <div class="story-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Karim El Mernissi">
+                        </div>
+                        <div class="story-info">
+                            <h4>Karim El Mernissi</h4>
+                            <div class="story-role">International Recording Artist</div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <p>"Keyboard Hire Marrakech has been my go-to for every Moroccan tour. Their equipment is always pristine, and their team understands exactly what professional musicians need. The Nord Stage 2 I rented for my latest album recording was perfectly maintained and delivered right to the studio."</p>
+                        <span class="story-project">Album Recording Project 2024</span>
+                    </div>
+                </div>
+
+                <div class="story-item-about">
+                    <div class="story-header">
+                        <div class="story-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" alt="Leila Benjelloun">
+                        </div>
+                        <div class="story-info">
+                            <h4>Leila Benjelloun</h4>
+                            <div class="story-role">Event Producer, Marrakech Arts Festival</div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <p>"We've worked with Keyboard Hire Marrakech for five consecutive years of our festival. Their reliability, professionalism, and exceptional equipment quality make them an invaluable partner. The 24/7 support gives us peace of mind during our 10-day festival."</p>
+                        <span class="story-project">Annual Arts Festival</span>
+                    </div>
+                </div>
+
+                <div class="story-item-about">
+                    <div class="story-header">
+                        <div class="story-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="David Chen">
+                        </div>
+                        <div class="story-info">
+                            <h4>David Chen</h4>
+                            <div class="story-role">Concert Tour Manager</div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <p>"As a tour manager for international artists, I need reliable partners in every city. Keyboard Hire Marrakech exceeded all expectations during our Morocco tour. Their equipment was world-class, and their technical support was invaluable for our complex setup requirements."</p>
+                        <span class="story-project">International Concert Tour</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -284,48 +618,129 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Keyboard Hire Marrakech</h3>
-                    <p>Morocco's premier keyboard rental service with over 15 years of excellence in serving artists, venues, and events.</p>
+        <footer style="background: #000; color: #fff; padding: 60px 0 20px;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                    <div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 20px; color: #fff;">Keyboard Hire Marrakech</h3>
+                        <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">Morocco's premier keyboard rental service with over 15 years of excellence in serving artists, venues, and events throughout the country.</p>
+                        <div style="display: flex; gap: 15px;">
+                            <a href="#" style="color: #fff; text-decoration: none; padding: 8px 15px; background: #333; border-radius: 5px; font-size: 14px;">Facebook</a>
+                            <a href="#" style="color: #fff; text-decoration: none; padding: 8px 15px; background: #333; border-radius: 5px; font-size: 14px;">Instagram</a>
+                            <a href="#" style="color: #fff; text-decoration: none; padding: 8px 15px; background: #333; border-radius: 5px; font-size: 14px;">LinkedIn</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 20px; color: #fff;">Quick Links</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+                            <li style="margin-bottom: 10px;"><a href="about.html" style="color: #ccc; text-decoration: none;">About Us</a></li>
+                            <li style="margin-bottom: 10px;"><a href="clients.html" style="color: #ccc; text-decoration: none;">Our Clients</a></li>
+                            <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ccc; text-decoration: none;">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 20px; color: #fff;">Services</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px;"><a href="index.html#equipment" style="color: #ccc; text-decoration: none;">Equipment Hire</a></li>
+                            <li style="margin-bottom: 10px;"><a href="index.html#services" style="color: #ccc; text-decoration: none;">Event Rental</a></li>
+                            <li style="margin-bottom: 10px;"><a href="index.html#services" style="color: #ccc; text-decoration: none;">Studio Rental</a></li>
+                            <li style="margin-bottom: 10px;"><a href="index.html#services" style="color: #ccc; text-decoration: none;">Technical Support</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 20px; font-weight: 500; margin-bottom: 20px; color: #fff;">Contact Info</h3>
+                        <p style="color: #ccc; margin-bottom: 10px;"><strong>Phone:</strong> +212 5XX-XXX-XXX</p>
+                        <p style="color: #ccc; margin-bottom: 10px;"><strong>Email:</strong> info@keyboardhiremarrakech.com</p>
+                        <p style="color: #ccc;"><strong>Location:</strong> Gueliz, Marrakech, Morocco</p>
+                    </div>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#equipment">Equipment Hire</a></li>
-                        <li><a href="clients.html">Our Clients</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Event Keyboard Hire</a></li>
-                        <li><a href="#">Studio Rental</a></li>
-                        <li><a href="#">Technical Support</a></li>
-                        <li><a href="#">Emergency Service</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p><strong>Phone:</strong> +212 5XX-XXX-XXX</p>
-                    <p><strong>Email:</strong> info@keyboardhiremarrakech.com</p>
-                    <p><strong>Location:</strong> Gueliz, Marrakech</p>
+                <div style="text-align: center; padding-top: 20px; border-top: 1px solid #333; color: #ccc;">
+                    <p>&copy; 2024 Keyboard Hire Marrakech. All rights reserved. | Professional Keyboard Rental Since 2009</p>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Keyboard Hire Marrakech. All rights reserved. | Professional Keyboard Rental Since 2009</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
-    <script src="script.js"></script>
+    <script>
+// Hamburger Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const desktopMenu = document.querySelector('.desktop-menu');
+    const desktopSocial = document.querySelector('.desktop-social');
+    
+    // Check screen size on load
+    function checkScreenSize() {
+        if (window.innerWidth <= 768) {
+            hamburger.style.display = 'flex';
+            desktopMenu.style.display = 'none';
+            desktopSocial.style.display = 'none';
+        } else {
+            hamburger.style.display = 'none';
+            desktopMenu.style.display = 'block';
+            desktopSocial.style.display = 'flex';
+            mobileMenu.style.display = 'none';
+        }
+    }
+    
+    // Initial check
+    checkScreenSize();
+    
+    // Check on resize
+    window.addEventListener('resize', checkScreenSize);
+    
+    // Toggle mobile menu
+    hamburger.addEventListener('click', function() {
+        if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+            mobileMenu.style.display = 'block';
+        } else {
+            mobileMenu.style.display = 'none';
+        }
+    });
+    
+    // Close mobile menu when clicking on links
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.style.display = 'none';
+        });
+    });
+});
+
+// Desktop Menu Toggle
+function toggleDesktopMenu() {
+    const desktopMenuDropdown = document.getElementById('desktop-menu-dropdown');
+    if (desktopMenuDropdown.style.display === 'none' || desktopMenuDropdown.style.display === '') {
+        desktopMenuDropdown.style.display = 'block';
+    } else {
+        desktopMenuDropdown.style.display = 'none';
+    }
+}
+
+// Close desktop menu when clicking outside
+document.addEventListener('click', function(event) {
+    const desktopMenuDropdown = document.getElementById('desktop-menu-dropdown');
+    const desktopHamburger = document.querySelector('.desktop-hamburger');
+    
+    if (!desktopHamburger.contains(event.target) && !desktopMenuDropdown.contains(event.target)) {
+        desktopMenuDropdown.style.display = 'none';
+    }
+});
+
+// Close desktop menu when clicking on links
+document.addEventListener('DOMContentLoaded', function() {
+    const desktopLinks = document.querySelectorAll('#desktop-menu-dropdown a');
+    desktopLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            document.getElementById('desktop-menu-dropdown').style.display = 'none';
+        });
+    });
+});
+</script>
 </body>
 </html>
